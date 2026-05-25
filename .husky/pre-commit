@@ -1,0 +1,15 @@
+echo "▶ TypeScript check..."
+npx tsc --noEmit
+if [ $? -ne 0 ]; then
+  echo "✗ TypeScript errors found. Commit abortado."
+  exit 1
+fi
+echo "✓ TypeScript OK"
+
+echo "▶ Build..."
+npm run build
+if [ $? -ne 0 ]; then
+  echo "✗ Build falló. Commit abortado."
+  exit 1
+fi
+echo "✓ Build OK"

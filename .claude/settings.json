@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "bash",
+            "command": "cd \"C:/Users/DELL/Documents/invitacion-majo-cami\" && node -e \"const {execSync}=require('child_process'); try{execSync('npx tsc --noEmit',{stdio:'pipe',cwd:process.cwd()})}catch(e){const out=e.stdout?.toString()||e.stderr?.toString()||''; console.log(JSON.stringify({hookSpecificOutput:{hookEventName:'PostToolUse',additionalContext:'TypeScript errors detected — please fix before continuing:\\n'+out}}))}\"",
+            "timeout": 60,
+            "statusMessage": "Verificando TypeScript..."
+          }
+        ]
+      }
+    ]
+  }
+}
