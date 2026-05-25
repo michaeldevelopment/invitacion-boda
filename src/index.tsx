@@ -1,31 +1,27 @@
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const propuestas = [
   {
     id: 1,
-    path: '/propuesta1',
-    titulo: 'Propuesta 1',
-    descripcion: 'Photo-forward · Editorial · Cinematográfica',
-    tag: 'Fotos reales · Timeline con iconos · Nombres editoriales',
+    path: "/propuesta1",
+    titulo: "Propuesta 1",
+    descripcion: "Photo-forward · Editorial · Cinematográfica",
+    tag: "Fotos reales · Timeline con iconos · Nombres editoriales",
   },
   {
     id: 2,
-    path: '/propuesta2',
-    titulo: 'Propuesta 2',
-    descripcion: 'Scroll dinámico · Awwwards · Narrativa por actos',
-    tag: '10 actos · GSAP ScrollTrigger · Pin & reveal · Parallax',
+    path: "/propuesta2",
+    titulo: "Propuesta 2",
+    descripcion: "Scroll dinámico · Awwwards · Narrativa por actos",
+    tag: "10 actos · GSAP ScrollTrigger · Pin & reveal · Parallax",
   },
-]
+];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.15, duration: 0.7, ease: 'easeOut' },
-  }),
-}
+  visible: { opacity: 1 },
+};
 
 export default function ProposalsIndex() {
   return (
@@ -35,11 +31,7 @@ export default function ProposalsIndex() {
         animate="visible"
         className="text-center mb-16"
       >
-        <motion.p
-          custom={0}
-          variants={fadeUp}
-          className="section-label mb-4"
-        >
+        <motion.p custom={0} variants={fadeUp} className="section-label mb-4">
           Invitación digital
         </motion.p>
         <motion.h1
@@ -82,11 +74,17 @@ export default function ProposalsIndex() {
                 <div className="flex items-start justify-between">
                   <div>
                     <p className="section-label mb-2">{p.titulo}</p>
-                    <h2 className="font-serif text-xl text-borgona mb-1">{p.descripcion}</h2>
-                    <p className="font-serif text-xs text-borgona/50 italic">{p.tag}</p>
+                    <h2 className="font-serif text-xl text-borgona mb-1">
+                      {p.descripcion}
+                    </h2>
+                    <p className="font-serif text-xs text-borgona/50 italic">
+                      {p.tag}
+                    </p>
                   </div>
-                  <span className="text-borgona/30 group-hover:text-borgona group-hover:translate-x-1
-                                   transition-all duration-300 font-serif text-lg mt-1">
+                  <span
+                    className="text-borgona/30 group-hover:text-borgona group-hover:translate-x-1
+                                   transition-all duration-300 font-serif text-lg mt-1"
+                  >
                     →
                   </span>
                 </div>
@@ -96,5 +94,5 @@ export default function ProposalsIndex() {
         </div>
       </motion.div>
     </div>
-  )
+  );
 }

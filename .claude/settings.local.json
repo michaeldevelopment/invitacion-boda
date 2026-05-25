@@ -8,7 +8,8 @@
       "Bash(npm run *)",
       "Bash(Read \"C:\\\\Users\\\\DELL\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-DELL-Documents-invitacion-majo-cami\\\\cc6d8d90-8b30-46c6-a5da-c1f145dd94b8\\\\tasks\\\\bgd86yyv4.output\")",
       "Bash(npx tsc *)",
-      "PowerShell(Rename-Item *)"
+      "PowerShell(Rename-Item *)",
+      "Bash(bash -c 'cd \"C:/Users/DELL/Documents/invitacion-majo-cami\" && output=$\\(npx tsc --noEmit 2>&1\\); if [ -n \"$output\" ]; then echo \"$output\" | jq -Rs \"{\\\\\"hookSpecificOutput\\\\\":{\\\\\"hookEventName\\\\\":\\\\\"PostToolUse\\\\\",\\\\\"additionalContext\\\\\":\\(\\\\\"TypeScript errors detected — por favor corrígelos:\\\\\\\\n\\\\\" + .\\)}}\"; fi')"
     ]
   }
 }
