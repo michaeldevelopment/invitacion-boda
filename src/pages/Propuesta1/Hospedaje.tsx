@@ -20,7 +20,7 @@ const lugares = [
 
 export default function Hospedaje() {
   return (
-    <section className="bg-crema py-14 md:py-20 px-8 md:px-12 lg:px-20">
+    <section id="p1-hospedaje" className="bg-crema py-14 md:py-20 px-8 md:px-12 lg:px-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

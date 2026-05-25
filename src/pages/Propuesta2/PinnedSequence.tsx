@@ -39,6 +39,38 @@ const WORD_COLORS: Record<number, string> = {
   13: "#AB7E6C",
 };
 
+// ── Oraciones ──────────────────────────────────────────────────
+interface Oracion {
+  id: number;
+  texto: string;
+  autor: string;
+}
+const SEED_ORACIONES: Oracion[] = [
+  {
+    id: 1,
+    texto: "Que el amor de Dios guíe cada uno de sus pasos juntos.",
+    autor: "La familia",
+  },
+  {
+    id: 2,
+    texto: "Mucho amor, risas y aventuras en este nuevo camino.",
+    autor: "Un amigo cercano",
+  },
+  {
+    id: 3,
+    texto: "Que sus corazones sean siempre hogar el uno para el otro.",
+    autor: "Con todo el amor",
+  },
+];
+function loadOraciones(): Oracion[] {
+  try {
+    const stored = localStorage.getItem("p4-oraciones-v1");
+    return stored ? (JSON.parse(stored) as Oracion[]) : SEED_ORACIONES;
+  } catch {
+    return SEED_ORACIONES;
+  }
+}
+
 // ── Bokeh ──────────────────────────────────────────────────────
 const BOKEH = [
   {
@@ -72,13 +104,10 @@ const BOKEH = [
   { size: 90, top: "5%", right: "30%", color: "rgba(96,20,26,0.06)", blur: 40 },
 ];
 
-// ── Locations ──────────────────────────────────────────────────
-const IGLESIA_MAP = "https://maps.app.goo.gl/Fa4F7R6wTxcUJ9YW9";
-const RECEPCION_MAP = "https://maps.app.goo.gl/zFz6SJPdV2hQNEE9A";
-
 export default function PinnedSequence() {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [time, setTime] = useState(getTimeLeft);
+  const [oraciones] = useState<Oracion[]>(loadOraciones);
   const words = useMemo(() => INVITE_TEXT.split(" "), []);
 
   useEffect(() => {
@@ -180,31 +209,32 @@ export default function PinnedSequence() {
         "+=0.4",
       );
 
-      // ── Panel 4: Ubicaciones — cross-fade suave ──
+      // ── Panel 4: Lluvia de oraciones ──
       tl.fromTo(
-        "#p4-panel-locations",
+        "#p4-panel-oraciones",
         { opacity: 0 },
         { opacity: 1, duration: 0.6, ease: "power1.inOut" },
         "-=0.4",
       );
       tl.from(
-        ".p4-ps-locations .p4-loc-title",
-        { opacity: 0, y: 20, duration: 0.4, ease: "power2.out" },
+        "#p4-panel-oraciones .p4-or-label",
+        { opacity: 0, y: 10, duration: 0.4, ease: "power2.out" },
         "-=0.1",
       );
       tl.from(
-        ".p4-ps-locations .p4-loc-iglesia",
-        { x: -80, opacity: 0, duration: 0.5, ease: "power3.out" },
-        "-=0.1",
+        "#p4-panel-oraciones .p4-or-title",
+        { opacity: 0, y: 20, duration: 0.5, ease: "power2.out" },
+        "-=0.2",
       );
       tl.from(
-        ".p4-ps-locations .p4-loc-recepcion",
-        { x: 80, opacity: 0, duration: 0.5, ease: "power3.out" },
-        "-=0.3",
-      );
-      tl.to(
-        ".p4-ps-locations .p4-loc-stroke",
-        { strokeDashoffset: 0, duration: 0.4, ease: "none" },
+        "#p4-panel-oraciones .p4-oracion-card",
+        {
+          opacity: 0,
+          y: 30,
+          stagger: 0.15,
+          duration: 0.5,
+          ease: "power2.out",
+        },
         "-=0.2",
       );
 
@@ -231,11 +261,6 @@ export default function PinnedSequence() {
     },
     { scope: wrapperRef },
   );
-
-  const handleCardEnter = (e: React.MouseEvent<HTMLDivElement>) =>
-    gsap.to(e.currentTarget, { y: -6, duration: 0.3, ease: "power2.out" });
-  const handleCardLeave = (e: React.MouseEvent<HTMLDivElement>) =>
-    gsap.to(e.currentTarget, { y: 0, duration: 0.3, ease: "power2.out" });
 
   const values = [time.days, time.hours, time.minutes, time.seconds];
 
@@ -425,197 +450,71 @@ export default function PinnedSequence() {
         </div>
       </div>
 
-      {/* ══ Panel 4: Ubicaciones ══ */}
+      {/* ══ Panel 4: Lluvia de oraciones ══ */}
       <div
-        id="p4-panel-locations"
-        className="p4-ps-locations absolute inset-0 flex flex-col items-center justify-center py-12 px-6"
-        style={{ backgroundColor: "#E8E1D3", opacity: 0 }}
+        id="p4-panel-oraciones"
+        className="absolute inset-0 flex flex-col items-center justify-center overflow-hidden"
+        style={{
+          background: "linear-gradient(160deg, #e2d8cb 0%, #d5c8b8 100%)",
+          opacity: 0,
+        }}
       >
-        <div className="p4-loc-title text-center mb-8">
+        <FloralDecoration
+          position="top-left"
+          speed={0.08}
+          size={120}
+          opacity={0.2}
+        />
+        <FloralDecoration
+          position="bottom-right"
+          speed={0.1}
+          size={150}
+          opacity={0.25}
+        />
+
+        <div className="relative z-10 w-full max-w-4xl mx-auto px-8 text-center">
           <p
-            className="font-serif text-[0.8rem] md:text-[0.875rem] tracking-[0.3em] uppercase mb-3"
+            className="p4-or-label font-serif text-[0.75rem] tracking-[0.3em] uppercase mb-3"
             style={{ color: "rgba(96,20,26,0.65)" }}
           >
-            El día
+            Lluvia de oraciones
           </p>
           <h2
-            className="font-serif font-light"
-            style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "#60141A" }}
+            className="p4-or-title font-serif font-light mb-10"
+            style={{
+              fontSize: "clamp(1.4rem, 3.5vw, 2.4rem)",
+              color: "#60141A",
+              lineHeight: 1.3,
+            }}
           >
-            21/08/2026
+            Tu oración y tu bendición son el regalo más grande que podemos
+            recibir
           </h2>
-          <div className="flex items-center justify-center gap-3 mt-4">
-          </div>
-        </div>
 
-        <div className="p4-loc-cards w-full max-w-4xl flex flex-col md:flex-row items-stretch relative">
-          {/* Iglesia */}
-          <div
-            className="p4-loc-iglesia p4-location-card flex-1 p-8 md:p-10 cursor-pointer"
-            onMouseEnter={handleCardEnter}
-            onMouseLeave={handleCardLeave}
-          >
-            <div className="p4-loc-pin mb-5">
-              <svg width="28" height="36" viewBox="0 0 28 36" fill="none">
-                <path
-                  d="M14 0C6.268 0 0 6.268 0 14C0 22 14 36 14 36C14 36 28 22 28 14C28 6.268 21.732 0 14 0Z"
-                  fill="#60141A"
-                  fillOpacity="0.15"
-                  stroke="#60141A"
-                  strokeWidth="1.5"
-                />
-                <circle
-                  cx="14"
-                  cy="14"
-                  r="5"
-                  fill="#60141A"
-                  fillOpacity="0.5"
-                />
-              </svg>
-            </div>
-            <p
-              className="font-serif text-[0.75rem] md:text-[0.8rem] tracking-[0.25em] uppercase mb-3"
-              style={{ color: "rgba(96,20,26,0.65)" }}
-            >
-              Celebración Eucarística
-            </p>
-            <h3
-              className="font-serif font-light text-xl md:text-2xl mb-2"
-              style={{ color: "#60141A" }}
-            >
-              Parroquia La Divina Eucaristía
-            </h3>
-            <p
-              className="font-serif text-sm italic mb-1"
-              style={{ color: "#7A8D61" }}
-            >
-              Poblado · Medellín
-            </p>
-            <p
-              className="font-serif text-xs mb-6 leading-relaxed"
-              style={{ color: "rgba(96,20,26,0.55)" }}
-            >
-              Cl. 7 #35-56, El Poblado
-            </p>
-            <p
-              className="font-serif font-light text-2xl mb-6"
-              style={{ color: "#60141A" }}
-            >
-              3:00 p.m.
-            </p>
-            <a
-              href={IGLESIA_MAP}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block font-serif text-[0.65rem] tracking-[0.25em] uppercase border px-6 py-2.5 transition-all duration-300"
-              style={{ borderColor: "#60141A", color: "#60141A" }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#60141A";
-                e.currentTarget.style.color = "#E8E1D3";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "transparent";
-                e.currentTarget.style.color = "#60141A";
-              }}
-            >
-              Ver ubicación
-            </a>
-          </div>
-
-          {/* Línea divisora */}
-          <div className="hidden md:flex flex-col items-center justify-center px-6 py-10 relative">
-            <svg
-              width="2"
-              height="200"
-              viewBox="0 0 2 200"
-              className="absolute top-1/2 -translate-y-1/2"
-            >
-              <line
-                x1="1"
-                y1="0"
-                x2="1"
-                y2="200"
-                stroke="#60141A"
-                strokeWidth="1"
-                strokeDasharray="200"
-                strokeDashoffset="200"
-                className="p4-loc-stroke"
-                strokeOpacity="0.25"
-              />
-            </svg>
-          </div>
-
-          {/* Recepción */}
-          <div
-            className="p4-loc-recepcion p4-location-card flex-1 p-8 md:p-10 cursor-pointer"
-            onMouseEnter={handleCardEnter}
-            onMouseLeave={handleCardLeave}
-          >
-            <div className="p4-loc-pin mb-5">
-              <svg width="28" height="36" viewBox="0 0 28 36" fill="none">
-                <path
-                  d="M14 0C6.268 0 0 6.268 0 14C0 22 14 36 14 36C14 36 28 22 28 14C28 6.268 21.732 0 14 0Z"
-                  fill="#7A8D61"
-                  fillOpacity="0.15"
-                  stroke="#7A8D61"
-                  strokeWidth="1.5"
-                />
-                <circle
-                  cx="14"
-                  cy="14"
-                  r="5"
-                  fill="#7A8D61"
-                  fillOpacity="0.5"
-                />
-              </svg>
-            </div>
-            <p
-              className="font-serif text-[0.75rem] md:text-[0.8rem] tracking-[0.25em] uppercase mb-3"
-              style={{ color: "rgba(122,141,97,0.85)" }}
-            >
-              Recepción
-            </p>
-            <h3
-              className="font-serif font-light text-xl md:text-2xl mb-2"
-              style={{ color: "#60141A" }}
-            >
-              Quince Lucas Cocina Campestre
-            </h3>
-            <p
-              className="font-serif text-sm italic mb-1"
-              style={{ color: "#7A8D61" }}
-            >
-              Santa Elena · Medellín
-            </p>
-            <p
-              className="font-serif text-xs mb-6 leading-relaxed"
-              style={{ color: "rgba(96,20,26,0.55)" }}
-            >
-              Cl 20C Sur #15-96, Santa Elena
-            </p>
-            <p
-              className="font-serif font-light text-2xl mb-6"
-              style={{ color: "#60141A" }}
-            >
-              A continuación
-            </p>
-            <a
-              href={RECEPCION_MAP}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block font-serif text-[0.65rem] tracking-[0.25em] uppercase border px-6 py-2.5 transition-all duration-300"
-              style={{ borderColor: "#7A8D61", color: "#7A8D61" }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#7A8D61";
-                e.currentTarget.style.color = "#E8E1D3";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "transparent";
-                e.currentTarget.style.color = "#7A8D61";
-              }}
-            >
-              Ver ubicación
-            </a>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {oraciones.map((o) => (
+              <div
+                key={o.id}
+                className="p4-oracion-card p-6 rounded-sm"
+                style={{
+                  backgroundColor: "rgba(255,255,255,0.35)",
+                  backdropFilter: "blur(4px)",
+                }}
+              >
+                <p
+                  className="font-serif italic text-sm leading-relaxed mb-4"
+                  style={{ color: "#60141A" }}
+                >
+                  "{o.texto}"
+                </p>
+                <p
+                  className="font-serif text-[0.6rem] tracking-[0.2em] uppercase"
+                  style={{ color: "#AB7E6C" }}
+                >
+                  — {o.autor}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

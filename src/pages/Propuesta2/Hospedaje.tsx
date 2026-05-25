@@ -114,6 +114,7 @@ export default function Hospedaje() {
   return (
     <div
       ref={sectionRef}
+      id="p2-hospedaje"
       className="p4-section py-24 px-6"
       style={{ backgroundColor: '#E8E1D3', opacity: 0 }}
     >

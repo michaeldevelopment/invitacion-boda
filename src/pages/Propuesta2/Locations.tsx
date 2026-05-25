@@ -8,26 +8,15 @@ export default function Locations() {
   const sectionRef = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
-    const isMobile = window.innerWidth < 768
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (prefersReduced) return
 
-    // Pinned scrub — mismo patrón que InvitationPhrase
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: 'top top',
-        end: '+=300%',
-        pin: !isMobile,
-        scrub: 1.2,
-        anticipatePin: 1,
-      },
-    })
+    const st = { trigger: sectionRef.current, start: 'top 80%', toggleActions: 'play none none none' }
 
-    tl.from('.p4-loc-title', { opacity: 0, y: 20, duration: 0.4, ease: 'power2.out' })
-      .from('.p4-loc-iglesia', { x: -80, opacity: 0, duration: 0.6, ease: 'power3.out' }, '-=0.1')
-      .from('.p4-loc-recepcion', { x: 80, opacity: 0, duration: 0.6, ease: 'power3.out' }, '-=0.4')
-      .to('.p4-loc-stroke', { strokeDashoffset: 0, duration: 0.5, ease: 'none' }, '-=0.2')
+    gsap.from('.p4-loc-title', { opacity: 0, y: 24, duration: 0.6, ease: 'power2.out', scrollTrigger: st })
+    gsap.from('.p4-loc-iglesia', { x: -50, opacity: 0, duration: 0.7, ease: 'power3.out', delay: 0.15, scrollTrigger: st })
+    gsap.from('.p4-loc-recepcion', { x: 50, opacity: 0, duration: 0.7, ease: 'power3.out', delay: 0.25, scrollTrigger: st })
+    gsap.to('.p4-loc-stroke', { strokeDashoffset: 0, duration: 0.6, ease: 'power2.inOut', delay: 0.4, scrollTrigger: st })
   }, { scope: sectionRef })
 
   const handleCardEnter = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -39,6 +28,7 @@ export default function Locations() {
 
   return (
     <div
+      id="p2-ubicacion"
       ref={sectionRef}
       className="p4-section flex flex-col items-center justify-center py-24 px-6"
       style={{ backgroundColor: '#E8E1D3' }}

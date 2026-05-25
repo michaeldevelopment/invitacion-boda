@@ -5,7 +5,7 @@ const PHOTO =
 
 export default function Hero() {
   return (
-    <section className="bg-white">
+    <section id="p1-hero" className="bg-white">
 
       {/* Monograma superior */}
       <motion.div

@@ -111,6 +111,7 @@ export default function DressCode() {
   return (
     <div
       ref={sectionRef}
+      id="p2-dresscode"
       className="py-24 px-6"
       style={{ backgroundColor: "#f0ebe2", minHeight: "unset" }}
     >

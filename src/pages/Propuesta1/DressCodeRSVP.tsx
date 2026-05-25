@@ -9,7 +9,7 @@ export default function DressCodeRSVP() {
   ]
 
   return (
-    <section className="bg-white px-8 py-12 md:py-20">
+    <section id="p1-dresscode" className="bg-white px-8 py-12 md:py-20">
       {/*
         Mobile: columna (dress code arriba, RSVP abajo)
         Tablet+: fila (dress code izquierda, divisor, RSVP derecha)
@@ -62,6 +62,7 @@ export default function DressCodeRSVP() {
 
         {/* ── RSVP ── */}
         <motion.div
+          id="p1-rsvp"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}

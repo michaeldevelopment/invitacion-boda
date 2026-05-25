@@ -42,7 +42,7 @@ const lugares = [
 
 export default function Locations() {
   return (
-    <section className="bg-white">
+    <section id="p1-ubicacion" className="bg-white">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

@@ -1,3 +1,4 @@
+import NavMenu from './NavMenu'
 import Hero from './Hero'
 import Countdown from './Countdown'
 import FullPhoto from './FullPhoto'
@@ -17,8 +18,8 @@ const PHOTOS = {
 
 export default function Propuesta2() {
   return (
-    // Sin max-width fijo — el layout se adapta por sección
-    <main className="bg-white">
+    <main className="bg-white" style={{ paddingTop: 56 }}>
+      <NavMenu />
 
       {/* 1. HERO — triptych responsive */}
       <Hero />

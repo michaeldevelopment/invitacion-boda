@@ -122,6 +122,7 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
+      id="p2-hero"
       className="p4-hero-bg relative h-screen flex flex-col items-center justify-center overflow-hidden"
     >
       {/* Grain overlay */}

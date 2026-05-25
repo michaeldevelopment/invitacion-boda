@@ -89,6 +89,7 @@ export default function RSVP() {
   return (
     <div
       ref={sectionRef}
+      id="p2-rsvp"
       className="p4-section py-24 px-6 relative flex items-center justify-center overflow-hidden"
       style={{ backgroundColor: "#2e1710", opacity: 0 }}
     >
