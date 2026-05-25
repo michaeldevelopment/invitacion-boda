@@ -117,7 +117,6 @@ export default function PinnedSequence() {
 
   useGSAP(
     () => {
-      const isMobile = window.innerWidth < 768;
       const prefersReduced = window.matchMedia(
         "(prefers-reduced-motion: reduce)",
       ).matches;
@@ -135,7 +134,7 @@ export default function PinnedSequence() {
           trigger: wrapperRef.current,
           start: "top top",
           end: "+=500%",
-          pin: !isMobile,
+          pin: true,
           scrub: 1.2,
           anticipatePin: 1,
         },
