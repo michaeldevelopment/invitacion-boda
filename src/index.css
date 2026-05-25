@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    @apply bg-crema font-serif text-borgona;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  ::selection {
+    background-color: #AB7E6C33;
+    color: #60141A;
+  }
+}
+
+@layer components {
+  .divider {
+    @apply flex items-center gap-4 my-2;
+  }
+
+  .divider::before,
+  .divider::after {
+    content: '';
+    @apply flex-1 h-px bg-borgona opacity-30;
+  }
+
+  .section-label {
+    @apply text-xs tracking-widest uppercase text-terracota font-serif;
+  }
+
+  .btn-primary {
+    @apply border border-borgona text-borgona text-xs tracking-widest uppercase px-8 py-3
+           hover:bg-borgona hover:text-crema transition-all duration-300 font-serif;
+  }
+
+  .btn-crema {
+    @apply border border-crema text-crema text-xs tracking-widest uppercase px-8 py-3
+           hover:bg-crema hover:text-borgona transition-all duration-300 font-serif;
+  }
+}
