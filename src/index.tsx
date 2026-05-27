@@ -16,6 +16,13 @@ const propuestas = [
     descripcion: "Scroll dinámico · Awwwards · Narrativa por actos",
     tag: "10 actos · GSAP ScrollTrigger · Pin & reveal · Parallax",
   },
+  {
+    id: 3,
+    path: "/propuesta3",
+    titulo: "Propuesta 3",
+    descripcion: "Sobre animado · Tarjetas apiladas · Sello de lacre",
+    tag: "Framer Motion · Mobile-first · Vintage romántico · 13 secciones",
+  },
 ];
 
 const fadeUp = {

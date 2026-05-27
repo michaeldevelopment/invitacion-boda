@@ -10,6 +10,12 @@
     -ms-overflow-style: none;
   }
 
+  @media (min-width: 768px) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
   html::-webkit-scrollbar {
     display: none;
   }

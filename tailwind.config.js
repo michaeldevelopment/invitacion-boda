@@ -9,6 +9,7 @@ export default {
         terracota: '#AB7E6C',
         crema: '#E8E1D3',
         'crema-dark': '#D9CFBF',
+        dorado: '#C9A84C',
       },
       fontFamily: {
         serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
