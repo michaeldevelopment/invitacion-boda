@@ -32,7 +32,7 @@ const fadeUp = {
 
 export default function ProposalsIndex() {
   return (
-    <div className="min-h-screen bg-crema flex flex-col items-center justify-center px-6 py-20">
+    <div className="min-h-screen bg-crema flex flex-col items-center justify-start md:justify-center px-6 py-20">
       <motion.div
         initial="hidden"
         animate="visible"

@@ -5,20 +5,19 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import ProgressBar from "./shared/ProgressBar";
 import Hero from "./Hero";
-import PinnedSequence from "./PinnedSequence";
+import InvitationPhrase from "./InvitationPhrase";
+import Oraciones from "./Oraciones";
 import Locations from "./Locations";
 import DressCode from "./DressCode";
 import Hospedaje from "./Hospedaje";
 import RSVP from "./RSVP";
 import "./propuesta4.css";
 
-export default function Propuesta4() {
+export default function Propuesta2() {
   useEffect(() => {
-    // Scroll to top on mount
     window.scrollTo(0, 0);
 
     return () => {
-      // Kill all ScrollTriggers when leaving the page
       ScrollTrigger.getAll().forEach((t) => t.kill());
     };
   }, []);
@@ -31,10 +30,13 @@ export default function Propuesta4() {
       {/* Acto 1 — Hero */}
       <Hero />
 
-      {/* Actos 2–4 — Secuencia pinned: frase · countdown · pausa */}
-      <PinnedSequence />
+      {/* Actos 2–4 — Frase · Countdown · Pausa emocional */}
+      <InvitationPhrase />
 
-      {/* Acto 5 — Ubicaciones (ceremonia y recepción) */}
+      {/* Acto 5 — Lluvia de oraciones */}
+      <Oraciones />
+
+      {/* Acto 6 — Ubicaciones (ceremonia y recepción) */}
       <Locations />
 
       {/* Acto 7 — Dress code */}
