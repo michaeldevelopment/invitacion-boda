@@ -30,20 +30,89 @@ Crear una invitación de boda digital para el matrimonio de **Cami y Majo**. La 
 
 ---
 
-## Textos Obligatorios en la Página
+## Esquema Textual Definitivo
 
-Estos textos deben aparecer en la web exactamente como están escritos:
+**La invitación debe seguir exactamente este esquema de textos, sección por sección.**
+El archivo de referencia completo es `textos.md` en la raíz del proyecto.
 
-1. *"Te invitamos para celebrar juntos uno de los días más importantes de nuestras vidas"*
-2. *"Tu compañía para nosotros es el mejor regalo"*
-3. *"Por favor confírmanos tu asistencia antes del 1 de junio. Después de esa fecha, si no hemos recibido respuesta, asumiremos con cariño que no podrás acompañarnos."*
+---
 
-### Cita Bíblica
+### Sección 1 — Hero
 
-> *"Amamos porque él nos amó primero"*
+- **Título:** Cami y Majo
+- **Fecha:** 21 · Agosto · 2026
+- **Hora:** 3:00 p.m.
+- **Frase de bienvenida:** "Hemos preparado un lugar para ti"
+
+---
+
+### Sección 2 — Frase de invitación
+
+Hay momentos que cambian nuestras vidas y otros que marcan el comienzo de una nueva.
+
+Nos encantaría que nos acompañaras a celebrar el día en que decidiremos caminar juntos para siempre.
+
+**Versículo central (usar como cita destacada, respetar referencia exacta):**
+
+> *"Amamos porque Él nos amó primero"*
 > — 1 Jn 4,19
 
-Texto central de la invitación. Debe usarse como cita de apertura, frase de sección o elemento decorativo destacado. Respetar la referencia exacta: **1 Jn 4,19**.
+**Párrafo narrativo:**
+Más que una boda, celebramos la fidelidad de Dios.
+Durante cinco años Dios ha estado tejiendo nuestra historia entre risas, llantos, aprendizajes, retos y mucha Gracia.
+Queremos celebrar las personas, los procesos, las oraciones y los momentos que nos han traído hasta ahí.
+Por eso, hemos preparado este momento para compartir con quienes han sido parte de nuestra historia.
+
+---
+
+### Sección 3 — Lluvia de oraciones
+
+- **Título:** Lluvia de oraciones
+- **Texto:** Lo más importante para nosotros es compartir ese día contigo.
+  Te invitamos a acompañarnos desde ahora con tus oraciones por nuestro matrimonio, nuestro hogar y todo lo que estamos por construir.
+
+---
+
+### Sección 4 — Ubicaciones
+
+- **Título:** Así viviremos este día
+- **Subtítulo:** Aquí encontrarás los horarios y lugares para acompañarnos durante nuestro matrimonio.
+
+**Itinerario:**
+- 3:00 p.m. — La promesa
+- 5:00 p.m. — El brindis por esta nueva etapa
+- 6:00 p.m. — Compartiremos la mesa
+- 7:00 p.m. — Algo dulce nos esperará
+- 9:00 p.m. — Nos despediremos
+
+**Ceremonia:** Parroquia La Divina Eucaristía · Cl. 7 #35-56, El Poblado, Medellín
+**Recepción:** Quince Lucas Cocina Campestre · Cl 20C Sur #15 96, Santa Elena, Medellín
+
+---
+
+### Sección 5 — Dress Code
+
+- **Título:** El ambiente que soñamos
+- **Descripción:** Tendremos una celebración íntima, cálida y cercana.
+- **Indicación:** Dress code: semi formal · Te sugerimos elegir tonos claros y suaves.
+- **Colores reservados:** Blanco · Beige · Gris
+- **Nota:** Preferiblemente sin estampados para conservar la estética del evento.
+
+---
+
+### Sección 6 — Hospedaje
+
+- **Título:** Si vienes de otra ciudad
+- **Texto:** Queremos que disfrutes con tranquilidad.
+  Aquí encontrarás algunas opciones de alojamiento cercanas al lugar del evento.
+
+---
+
+### Sección 7 — RSVP
+
+- **Título:** ¿Nos acompañas?
+- **Texto de confirmación:** Por favor confírmanos tu asistencia antes del 12 de junio. Después de esa fecha, si no hemos recibido respuesta, asumiremos con amor que no podrás acompañarnos.
+- **Cierre:** Gracias por caminar con nosotros. — Cami y Majo
 
 ---
 
@@ -80,13 +149,15 @@ Semi-formal. Tonos tierra y cálidos (no colores neón ni blancos puros).
 
 ## Secciones de la Página Web
 
-1. **Hero / Portada** — Nombres de los novios, fecha y hora. Frase de bienvenida principal.
-2. **Nuestra historia** *(opcional)* — Espacio para foto o frase emotiva.
-3. **El día** — Celebración eucarística y recepción con horarios y mapas.
-4. **Lluvia de oraciones** — Sección para que los invitados dejen una oración o mensaje de bendición. **No usar el término "lluvia de sobres".**
-5. **Dress code** — Indicaciones de vestimenta con la paleta de colores sugerida.
-6. **Dónde hospedarse** — Sugerencias de Airbnb y hoteles cercanos tanto a la iglesia como al lugar de recepción, con enlaces directos para reservar.
-7. **Confirmación de asistencia (RSVP)** — Formulario o enlace para confirmar antes del 1 de junio.
+El orden y los textos de cada sección están definidos en el **Esquema Textual Definitivo** de este mismo documento. Las secciones son:
+
+1. **Hero** — Nombres, fecha, hora y frase de bienvenida.
+2. **Frase de invitación** — Narrativa emocional + versículo 1 Jn 4,19 + párrafo de historia.
+3. **Lluvia de oraciones** — Invitación a acompañar con oraciones. **No usar "lluvia de sobres".**
+4. **Ubicaciones** — Itinerario del día + ceremonia y recepción con mapas.
+5. **Dress code** — Semi formal, colores sugeridos y colores reservados para los novios.
+6. **Hospedaje** — Opciones de alojamiento cercanas a ambos lugares del evento.
+7. **RSVP** — Confirmación antes del 12 de junio + cierre de los novios.
 
 ---
 
@@ -126,6 +197,7 @@ Este proyecto tiene skills locales que Claude debe usar al trabajar en tareas re
 
 ## Reglas para Claude
 
+- **La invitación debe seguir exactamente el Esquema Textual Definitivo** de este documento. No inventar textos alternativos ni reemplazar los existentes.
 - Todo el contenido de la página web debe estar **en español**.
 - Tono: cálido, íntimo, elegante. No usar lenguaje corporativo ni frío.
 - No mencionar "lluvia de sobres" en ninguna parte. La tradición se llama **"lluvia de oraciones"**.

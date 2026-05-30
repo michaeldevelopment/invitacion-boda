@@ -23,6 +23,13 @@ const propuestas = [
     descripcion: "Sobre animado · Tarjetas apiladas · Sello de lacre",
     tag: "Framer Motion · Mobile-first · Vintage romántico · 13 secciones",
   },
+  {
+    id: 4,
+    path: "/propuesta4",
+    titulo: "Propuesta 4",
+    descripcion: "Pétalos vinotinto · Elegancia minimalista · Textos definitivos",
+    tag: "GSAP · Pétalos vinotinto · Paleta sobria · Esquema textual completo",
+  },
 ];
 
 const fadeUp = {

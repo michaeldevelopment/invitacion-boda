@@ -1,0 +1,219 @@
+.p4-root {
+  background-color: #e8e1d3;
+  overflow-x: hidden;
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.p4-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  z-index: 1;
+}
+
+.p4-section {
+  min-height: 100vh;
+  position: relative;
+}
+
+.p4-clip-hidden {
+  clip-path: inset(0 100% 0 0);
+}
+
+/* Hero dark overlay */
+.p4-hero-bg {
+  background: linear-gradient(
+    160deg,
+    #1a0d0a 0%,
+    #2e1710 40%,
+    #3d2318 70%,
+    #271109 100%
+  );
+}
+
+/* Vignette for Countdown */
+.p4-vignette::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 40%,
+    rgba(30, 16, 10, 0.35) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Progress bar */
+.p4-progress-bar {
+  position: fixed;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 120px;
+  background-color: rgba(96, 20, 26, 0.15);
+  z-index: 100;
+}
+
+.p4-progress-fill {
+  width: 100%;
+  height: 100%;
+  background-color: #60141a;
+  transform: scaleY(0);
+  transform-origin: top center;
+}
+
+/* Floral decoration */
+.p4-floral {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.55;
+  z-index: 2;
+}
+
+/* Countdown units */
+.p4-countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.p4-countdown-number {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 300;
+  color: #60141a;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.p4-countdown-label {
+  font-size: clamp(0.75rem, 1.8vw, 0.95rem);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(96, 20, 26, 0.65);
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.p4-countdown-sep {
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: rgba(96, 20, 26, 0.3);
+  line-height: 1;
+  align-self: flex-start;
+  padding-top: 0.5rem;
+}
+
+/* Location cards */
+.p4-location-card {
+  background: rgba(232, 225, 211, 0.6);
+  border: 1px solid rgba(96, 20, 26, 0.12);
+  backdrop-filter: blur(4px);
+  transition: box-shadow 0.3s ease;
+}
+
+.p4-location-card:hover {
+  box-shadow: 0 12px 40px rgba(96, 20, 26, 0.08);
+}
+
+/* Oraciones — sin cards, solo texto */
+.p4-oracion-card {
+  background: transparent;
+  border: none;
+}
+
+/* Hospedaje cards */
+.p4-hospedaje-card {
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(96, 20, 26, 0.1);
+}
+
+.p4-hospedaje-img-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.p4-hospedaje-img {
+  transition: none;
+  will-change: transform;
+}
+
+/* RSVP */
+.p4-rsvp-input {
+  background: transparent;
+  border-bottom: 1px solid rgba(232, 225, 211, 0.4);
+  color: #e8e1d3;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.1rem;
+  outline: none;
+  width: 100%;
+  padding: 0.5rem 0;
+  transition: border-color 0.3s ease;
+}
+
+.p4-rsvp-input::placeholder {
+  color: rgba(232, 225, 211, 0.4);
+}
+
+.p4-rsvp-input:focus {
+  border-color: #ab7e6c;
+}
+
+.p4-rsvp-input option {
+  background: #2e1710;
+  color: #e8e1d3;
+}
+
+/* Scroll reveal words */
+.p4-word {
+  display: inline-block;
+}
+
+/* Oraciones textarea placeholder */
+.p4-or-textarea::placeholder {
+  color: rgba(96, 20, 26, 0.35);
+  font-style: italic;
+}
+
+/* Button ink effect */
+.p4-btn-ink {
+  position: absolute;
+  inset: 0;
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+/* Typewriter cursor */
+.p4-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background-color: #ab7e6c;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: p4-blink 1s step-end infinite;
+}
+
+@keyframes p4-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Closing section */
+.p4-closing {
+  background-color: #e8e1d3;
+  min-height: unset !important;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
