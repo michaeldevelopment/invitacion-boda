@@ -209,19 +209,12 @@ export default function Hero() {
           <div className="w-12 h-px bg-white/20" />
         </div>
 
-        {/* Bible verse */}
+        {/* Welcome phrase */}
         <p
           className="p4-hero-hour font-serif italic text-white/50"
-          style={{ fontSize: "clamp(1.1rem, 2.8vw, 1.6rem)", lineHeight: 1.5 }}
+          style={{ fontSize: "clamp(1.1rem, 2.8vw, 1.5rem)", lineHeight: 1.5 }}
         >
-          "Amamos porque Él nos amó primero"
-          <br />
-          <span
-            className="font-serif not-italic"
-            style={{ fontSize: "0.7em", letterSpacing: "0.25em", opacity: 0.65 }}
-          >
-            1 Jn 4,19
-          </span>
+          Hemos preparado un lugar para ti
         </p>
       </div>
 

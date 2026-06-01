@@ -86,21 +86,15 @@ export default function Locations() {
     >
       {/* Encabezado */}
       <div className="p4-loc-title text-center mb-10">
-        <p
-          className="font-serif text-[0.8rem] md:text-[0.875rem] tracking-[0.3em] uppercase mb-3"
-          style={{ color: "rgba(96,20,26,0.65)" }}
-        >
-          El día
-        </p>
         <h2
           className="font-serif font-light"
           style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "#60141A" }}
         >
-          Así viviremos este día
+          Así viviremos éste día
         </h2>
         <p
-          className="font-serif italic text-sm mt-3"
-          style={{ color: "rgba(96,20,26,0.55)" }}
+          className="font-serif italic text-base mt-3"
+          style={{ color: "rgba(96,20,26,0.72)" }}
         >
           Aquí encontrarás los horarios y lugares para acompañarnos durante
           nuestro matrimonio
@@ -112,18 +106,18 @@ export default function Locations() {
         {ITINERARIO.map((item, i) => (
           <div key={i} className="flex items-center gap-4">
             <span
-              className="font-serif text-xs tracking-[0.18em] text-right"
-              style={{ color: "rgba(96,20,26,0.5)", minWidth: "5.5rem" }}
+              className="font-serif text-sm tracking-[0.18em] text-right"
+              style={{ color: "rgba(96,20,26,0.65)", minWidth: "5.5rem" }}
             >
               {item.hora}
             </span>
             <div
               className="w-px h-3"
-              style={{ backgroundColor: "rgba(96,20,26,0.2)" }}
+              style={{ backgroundColor: "rgba(96,20,26,0.25)" }}
             />
             <span
-              className="font-serif italic text-sm"
-              style={{ color: "rgba(96,20,26,0.7)" }}
+              className="font-serif italic text-base"
+              style={{ color: "rgba(96,20,26,0.82)" }}
             >
               {item.label}
             </span>
@@ -153,7 +147,7 @@ export default function Locations() {
           </div>
 
           <p
-            className="font-serif text-[0.75rem] md:text-[0.8rem] tracking-[0.25em] uppercase mb-3"
+            className="font-serif text-sm tracking-[0.2em] uppercase mb-3"
             style={{ color: "rgba(96,20,26,0.65)" }}
           >
             Celebración Eucarística
@@ -171,8 +165,8 @@ export default function Locations() {
             Poblado · Medellín
           </p>
           <p
-            className="font-serif text-xs mb-6 leading-relaxed"
-            style={{ color: "rgba(96,20,26,0.55)" }}
+            className="font-serif text-sm mb-6 leading-relaxed"
+            style={{ color: "rgba(96,20,26,0.7)" }}
           >
             Cl. 7 #35-56, El Poblado
           </p>
@@ -245,7 +239,7 @@ export default function Locations() {
           </div>
 
           <p
-            className="font-serif text-[0.75rem] md:text-[0.8rem] tracking-[0.25em] uppercase mb-3"
+            className="font-serif text-sm tracking-[0.2em] uppercase mb-3"
             style={{ color: "rgba(122,141,97,0.85)" }}
           >
             Recepción
@@ -263,8 +257,8 @@ export default function Locations() {
             Los Balsos · Medellín
           </p>
           <p
-            className="font-serif text-xs mb-6 leading-relaxed"
-            style={{ color: "rgba(96,20,26,0.55)" }}
+            className="font-serif text-sm mb-6 leading-relaxed"
+            style={{ color: "rgba(96,20,26,0.7)" }}
           >
             Cl 20C Sur #15-96, Poblado, Medellín, Antioquia
           </p>

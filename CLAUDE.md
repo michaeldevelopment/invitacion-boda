@@ -10,20 +10,22 @@ Crear una invitación de boda digital para el matrimonio de **Cami y Majo**. La 
 
 ## Evento
 
-| Detalle | Información |
-|---|---|
-| **Fecha** | 21 de agosto |
-| **Hora** | 3:00 p.m. |
+| Detalle    | Información          |
+| ---------- | -------------------- |
+| **Fecha**  | 21 de agosto         |
+| **Hora**   | 3:00 p.m.            |
 | **Novios** | Camilo (Cami) y Majo |
-| **Camilo** | Hombre (novio) |
-| **Majo** | Mujer (novia) |
+| **Camilo** | Hombre (novio)       |
+| **Majo**   | Mujer (novia)        |
 
 ### Celebración Eucarística
+
 - **Iglesia:** Parroquia La Divina Eucaristía - Poblado
 - **Dirección:** Cl. 7 #35-56, El Poblado, Medellín, Antioquia
 - 📍 [Ver ubicación en Google Maps](https://maps.app.goo.gl/Fa4F7R6wTxcUJ9YW9)
 
 ### Recepción
+
 - **Lugar:** Quince Lucas Cocina Campestre
 - **Dirección:** Cl 20C Sur #15 96, Santa Elena, Medellín, Antioquia
 - 📍 [Ver ubicación en Google Maps](https://maps.app.goo.gl/zFz6SJPdV2hQNEE9A)
@@ -54,8 +56,8 @@ Nos encantaría que nos acompañaras a celebrar el día en que decidiremos camin
 
 **Versículo central (usar como cita destacada, respetar referencia exacta):**
 
-> *"Amamos porque Él nos amó primero"*
-> — 1 Jn 4,19
+> _"Amamos porque Él nos amó primero"_
+> — 1 Juan 4,19
 
 **Párrafo narrativo:**
 Más que una boda, celebramos la fidelidad de Dios.
@@ -65,13 +67,7 @@ Por eso, hemos preparado este momento para compartir con quienes han sido parte 
 
 ---
 
-### Sección 3 — Lluvia de oraciones
-
-- **Título:** Lluvia de oraciones
-- **Texto:** Lo más importante para nosotros es compartir ese día contigo.
-  Te invitamos a acompañarnos desde ahora con tus oraciones por nuestro matrimonio, nuestro hogar y todo lo que estamos por construir.
-
----
+### Sección 3 - Contador
 
 ### Sección 4 — Ubicaciones
 
@@ -79,6 +75,7 @@ Por eso, hemos preparado este momento para compartir con quienes han sido parte 
 - **Subtítulo:** Aquí encontrarás los horarios y lugares para acompañarnos durante nuestro matrimonio.
 
 **Itinerario:**
+
 - 3:00 p.m. — La promesa
 - 5:00 p.m. — El brindis por esta nueva etapa
 - 6:00 p.m. — Compartiremos la mesa
@@ -97,6 +94,14 @@ Por eso, hemos preparado este momento para compartir con quienes han sido parte 
 - **Indicación:** Dress code: semi formal · Te sugerimos elegir tonos claros y suaves.
 - **Colores reservados:** Blanco · Beige · Gris
 - **Nota:** Preferiblemente sin estampados para conservar la estética del evento.
+
+---
+
+### Sección 6 — Lluvia de oraciones
+
+- **Título:** Lluvia de oraciones
+- **Texto:** Lo más importante para nosotros es compartir ese día contigo.
+  Te invitamos a acompañarnos desde ahora con tus oraciones por nuestro matrimonio, nuestro hogar y todo lo que estamos por construir.
 
 ---
 
@@ -119,6 +124,7 @@ Por eso, hemos preparado este momento para compartir con quienes han sido parte 
 ## Estética y Estilo
 
 ### Mood General
+
 **Vintage · Rústico · Romántico · Cercano · Muy cálido**
 
 Cinematográfico, editorial, atemporal. La referencia visual es un feed de fotografía de bodas elegante: mezcla de blanco y negro con tonos cálidos terrosos, composiciones limpias, sensación de película análoga. La página debe sentirse como una carta escrita a mano — íntima, acogedora, nunca fría ni minimalista en exceso.
@@ -132,17 +138,19 @@ Pinterest — inspiración de estructura, layouts y diseño visual de páginas w
 
 ### Paleta de Colores
 
-| Color | Hex | Uso sugerido |
-|---|---|---|
-| Borgoña oscuro | `#60141A` | Acentos, títulos, detalles |
-| Verde olivo | `#7A8D61` | Elementos secundarios, botanicals |
-| Terracota rosado | `#AB7E6C` | Fondos suaves, decorativos |
-| Crema / beige | `#E8E1D3` | Fondo principal de la página |
+| Color            | Hex       | Uso sugerido                      |
+| ---------------- | --------- | --------------------------------- |
+| Borgoña oscuro   | `#60141A` | Acentos, títulos, detalles        |
+| Verde olivo      | `#7A8D61` | Elementos secundarios, botanicals |
+| Terracota rosado | `#AB7E6C` | Fondos suaves, decorativos        |
+| Crema / beige    | `#E8E1D3` | Fondo principal de la página      |
 
 ### Tipografía
+
 Preferir tipografías serif elegantes con aire vintage (ej. Cormorant Garamond, Playfair Display, EB Garamond). Cursivas para frases emotivas, serif regular para información práctica.
 
 ### Dress Code
+
 Semi-formal. Tonos tierra y cálidos (no colores neón ni blancos puros).
 
 ---
@@ -164,6 +172,7 @@ El orden y los textos de cada sección están definidos en el **Esquema Textual 
 ## Hospedaje (Sección de la Web)
 
 La página debe incluir una sección con opciones de hospedaje cercanas a los dos lugares del evento. Mostrar:
+
 - Nombre del lugar
 - Enlace directo a Airbnb / Booking / hotel
 - Distancia aproximada a la iglesia y/o recepción
@@ -175,10 +184,10 @@ Buscar opciones reales cerca de las coordenadas de ambas ubicaciones al momento 
 
 ## Tech Stack
 
-| Tecnología | Uso |
-|---|---|
-| **React** | Framework principal del sitio web |
-| **Tailwind CSS** | Estilos y sistema de diseño utilitario |
+| Tecnología                  | Uso                                            |
+| --------------------------- | ---------------------------------------------- |
+| **React**                   | Framework principal del sitio web              |
+| **Tailwind CSS**            | Estilos y sistema de diseño utilitario         |
 | **Librería de animaciones** | Animaciones y transiciones (ej. Framer Motion) |
 
 ---
@@ -187,11 +196,11 @@ Buscar opciones reales cerca de las coordenadas de ambas ubicaciones al momento 
 
 Este proyecto tiene skills locales que Claude debe usar al trabajar en tareas relacionadas:
 
-| Skill | Archivo | Cuándo usarla |
-|---|---|---|
-| `ui-ux-designer` | `.claude/skills/ui-ux-designer.md` | Diseño visual, componentes, paleta, accesibilidad, sistema de diseño |
-| `frontend-design` | `.claude/skills/frontend-design.md` | Implementación de interfaces, maquetación, estilos |
-| `react-best-practices` | `.claude/skills/react-best-practices/SKILL.md` | Componentes React, optimización, patrones de rendimiento |
+| Skill                  | Archivo                                        | Cuándo usarla                                                        |
+| ---------------------- | ---------------------------------------------- | -------------------------------------------------------------------- |
+| `ui-ux-designer`       | `.claude/skills/ui-ux-designer.md`             | Diseño visual, componentes, paleta, accesibilidad, sistema de diseño |
+| `frontend-design`      | `.claude/skills/frontend-design.md`            | Implementación de interfaces, maquetación, estilos                   |
+| `react-best-practices` | `.claude/skills/react-best-practices/SKILL.md` | Componentes React, optimización, patrones de rendimiento             |
 
 ---
 

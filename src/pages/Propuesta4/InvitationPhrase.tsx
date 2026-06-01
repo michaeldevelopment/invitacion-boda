@@ -1,58 +1,67 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { gsap, useGSAP } from "./shared/gsap.config";
 import FloralDecoration from "./shared/FloralDecoration";
 
-const TEXT =
-  "Te invitamos para celebrar juntos uno de los días más importantes de nuestras vidas";
+const TEXT1 =
+  "Hay momentos que cambian nuestras vidas y otros que marcan el comienzo de una nueva.";
 
-const TARGET = new Date("2026-08-21T15:00:00");
-
-function getTimeLeft() {
-  const diff = TARGET.getTime() - Date.now();
-  if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
-  return {
-    days: Math.floor(diff / 86400000),
-    hours: Math.floor((diff % 86400000) / 3600000),
-    minutes: Math.floor((diff % 3600000) / 60000),
-    seconds: Math.floor((diff % 60000) / 1000),
-  };
-}
-
-function pad(n: number) {
-  return String(n).padStart(2, "0");
-}
-
-const UNITS = ["días", "horas", "minutos", "segundos"] as const;
+const TEXT2 =
+  "Nos encantaría que nos acompañaras a celebrar el día en que decidiremos caminar juntos para siempre.";
 
 const BOKEH_CIRCLES = [
-  { size: 180, top: "10%", left: "5%", color: "rgba(171,126,108,0.10)", blur: 60 },
-  { size: 250, top: "60%", right: "8%", color: "rgba(96,20,26,0.07)", blur: 80 },
-  { size: 120, top: "30%", left: "70%", color: "rgba(122,141,97,0.09)", blur: 50 },
-  { size: 200, bottom: "15%", left: "20%", color: "rgba(171,126,108,0.08)", blur: 70 },
+  {
+    size: 180,
+    top: "10%",
+    left: "5%",
+    color: "rgba(171,126,108,0.10)",
+    blur: 60,
+  },
+  {
+    size: 250,
+    top: "60%",
+    right: "8%",
+    color: "rgba(96,20,26,0.07)",
+    blur: 80,
+  },
+  {
+    size: 120,
+    top: "30%",
+    left: "70%",
+    color: "rgba(122,141,97,0.09)",
+    blur: 50,
+  },
+  {
+    size: 200,
+    bottom: "15%",
+    left: "20%",
+    color: "rgba(171,126,108,0.08)",
+    blur: 70,
+  },
   { size: 90, top: "5%", right: "30%", color: "rgba(96,20,26,0.05)", blur: 40 },
 ];
 
 function OrnamentSep() {
   return (
     <div className="flex items-center justify-center gap-4 my-16">
-      <div className="w-14 h-px" style={{ backgroundColor: "#AB7E6C", opacity: 0.3 }} />
+      <div
+        className="w-14 h-px"
+        style={{ backgroundColor: "#AB7E6C", opacity: 0.3 }}
+      />
       <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
         <circle cx="4" cy="4" r="2.5" fill="#AB7E6C" fillOpacity="0.45" />
       </svg>
-      <div className="w-14 h-px" style={{ backgroundColor: "#AB7E6C", opacity: 0.3 }} />
+      <div
+        className="w-14 h-px"
+        style={{ backgroundColor: "#AB7E6C", opacity: 0.3 }}
+      />
     </div>
   );
 }
 
 export default function InvitationPhrase() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [time, setTime] = useState(getTimeLeft);
-  const words = TEXT.split(" ");
-
-  useEffect(() => {
-    const id = setInterval(() => setTime(getTimeLeft()), 1000);
-    return () => clearInterval(id);
-  }, []);
+  const words1 = TEXT1.split(" ");
+  const words2 = TEXT2.split(" ");
 
   useGSAP(
     () => {
@@ -78,21 +87,9 @@ export default function InvitationPhrase() {
       });
 
       tl.from(
-        ".p4-countdown-title",
-        { opacity: 0, y: 15, duration: 0.5, ease: "power2.out" },
-        "+=0.25",
-      );
-      tl.from(
-        ".p4-countdown-unit",
-        {
-          rotateX: -80,
-          opacity: 0,
-          transformOrigin: "50% top",
-          stagger: 0.15,
-          duration: 0.5,
-          ease: "power3.out",
-        },
-        "-=0.15",
+        ".p4-versiculo",
+        { opacity: 0, y: 18, duration: 0.8, ease: "power2.out" },
+        "+=0.3",
       );
 
       BOKEH_CIRCLES.forEach((_, i) => {
@@ -106,21 +103,9 @@ export default function InvitationPhrase() {
           delay: i * 0.5,
         });
       });
-
-      gsap.to(".p4-countdown-sep", {
-        scale: 1.25,
-        repeat: -1,
-        yoyo: true,
-        duration: 0.9,
-        ease: "power1.inOut",
-        stagger: 0.2,
-        delay: 1.2,
-      });
     },
     { scope: sectionRef },
   );
-
-  const values = [time.days, time.hours, time.minutes, time.seconds];
 
   return (
     <div
@@ -150,66 +135,69 @@ export default function InvitationPhrase() {
         />
       ))}
 
-      <FloralDecoration position="top-left" speed={0.08} size={120} opacity={0.22} />
-      <FloralDecoration position="bottom-right" speed={0.1} size={150} opacity={0.28} />
+      <FloralDecoration
+        position="top-left"
+        speed={0.08}
+        size={120}
+        opacity={0.22}
+      />
+      <FloralDecoration
+        position="bottom-right"
+        speed={0.1}
+        size={150}
+        opacity={0.28}
+      />
 
       <div className="relative z-10 max-w-3xl mx-auto text-center">
-        {/* Frase de invitación — un solo color */}
+        {/* Frases de invitación */}
+        <p
+          className="font-serif italic leading-relaxed mb-6"
+          style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.6rem)", color: "#60141A" }}
+        >
+          {words1.map((word: string, i: number) => (
+            <span key={i}>
+              <span className="p4-ip-word p4-word">{word}</span>
+              {i < words1.length - 1 ? " " : ""}
+            </span>
+          ))}
+        </p>
         <p
           className="font-serif italic leading-relaxed"
           style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.6rem)", color: "#60141A" }}
         >
-          {words.map((word, i) => (
+          {words2.map((word: string, i: number) => (
             <span key={i}>
               <span className="p4-ip-word p4-word">{word}</span>
-              {i < words.length - 1 ? " " : ""}
+              {i < words2.length - 1 ? " " : ""}
             </span>
           ))}
         </p>
 
         <OrnamentSep />
 
-        {/* Countdown */}
-        <div className="relative">
+        {/* Versículo */}
+        <div className="p4-versiculo">
           <p
-            className="p4-countdown-title font-serif mb-5"
+            className="font-serif italic font-light"
             style={{
-              color: "rgba(96,20,26,0.55)",
-              letterSpacing: "0.3em",
-              textTransform: "uppercase",
-              fontSize: "0.7rem",
+              fontSize: "clamp(1.5rem, 3.5vw, 2.2rem)",
+              color: "#60141A",
+              lineHeight: 1.4,
             }}
           >
-            faltan
+            "Amamos porque Él nos amó primero"
           </p>
-
-          <div className="flex items-start gap-3 md:gap-6 justify-center">
-            {values.map((val, i) => (
-              <div key={UNITS[i]} className="flex items-start gap-3 md:gap-6">
-                <div className="p4-countdown-unit" style={{ perspective: "400px" }}>
-                  <span className="p4-countdown-number">{pad(val)}</span>
-                  <span className="p4-countdown-label">{UNITS[i]}</span>
-                </div>
-                {i < values.length - 1 && (
-                  <span className="p4-countdown-sep" aria-hidden="true">·</span>
-                )}
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-8 flex items-center justify-center gap-4">
-            <div className="w-10 h-px" style={{ backgroundColor: "#60141A", opacity: 0.18 }} />
-            <p
-              className="font-serif italic"
-              style={{
-                color: "rgba(96,20,26,0.55)",
-                fontSize: "clamp(0.85rem, 2vw, 1rem)",
-              }}
-            >
-              21 de agosto · 2026
-            </p>
-            <div className="w-10 h-px" style={{ backgroundColor: "#60141A", opacity: 0.18 }} />
-          </div>
+          <p
+            className="font-serif mt-4"
+            style={{
+              fontSize: "0.72rem",
+              letterSpacing: "0.32em",
+              textTransform: "uppercase",
+              color: "rgba(96,20,26,0.48)",
+            }}
+          >
+            1 Juan 4,19
+          </p>
         </div>
       </div>
     </div>

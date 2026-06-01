@@ -127,8 +127,8 @@ export default function RSVP() {
             ref={displayRef}
             className="font-serif italic leading-relaxed"
             style={{
-              fontSize: "clamp(0.85rem, 1.8vw, 1.1rem)",
-              color: "rgba(232,225,211,0.65)",
+              fontSize: "clamp(0.95rem, 2vw, 1.2rem)",
+              color: "rgba(232,225,211,0.85)",
               minHeight: "4em",
             }}
           />
@@ -176,8 +176,8 @@ export default function RSVP() {
           <p
             className="font-serif"
             style={{
-              fontSize: "clamp(0.85rem, 2vw, 1.2rem)",
-              color: "rgba(232,225,211,0.45)",
+              fontSize: "clamp(0.9rem, 2vw, 1.2rem)",
+              color: "rgba(232,225,211,0.68)",
             }}
           >
             Gracias por caminar con nosotros. — Cami y Majo

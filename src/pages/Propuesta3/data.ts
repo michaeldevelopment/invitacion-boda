@@ -76,11 +76,12 @@ export const SEED_ORACIONES = [
 ];
 
 export const TEXTOS = {
-  invitacion: "Te invitamos para celebrar juntos uno de los días más importantes de nuestras vidas",
+  invitacion:
+    "Te invitamos para celebrar juntos uno de los días más importantes de nuestras vidas",
   regalo: "Tu compañía para nosotros es el mejor regalo",
   rsvp: "Por favor confírmanos tu asistencia antes del 1 de junio. Después de esa fecha, si no hemos recibido respuesta, asumiremos con cariño que no podrás acompañarnos.",
   cita: "Amamos porque él nos amó primero",
-  citaRef: "1 Jn 4,19",
+  citaRef: "1 Juan 4,19",
 };
 
 export const SAVE_DATE_URL =

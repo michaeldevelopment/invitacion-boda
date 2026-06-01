@@ -9,7 +9,14 @@
       "Bash(Read \"C:\\\\Users\\\\DELL\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-DELL-Documents-invitacion-majo-cami\\\\cc6d8d90-8b30-46c6-a5da-c1f145dd94b8\\\\tasks\\\\bgd86yyv4.output\")",
       "Bash(npx tsc *)",
       "PowerShell(Rename-Item *)",
-      "Bash(bash -c 'cd \"C:/Users/DELL/Documents/invitacion-majo-cami\" && output=$\\(npx tsc --noEmit 2>&1\\); if [ -n \"$output\" ]; then echo \"$output\" | jq -Rs \"{\\\\\"hookSpecificOutput\\\\\":{\\\\\"hookEventName\\\\\":\\\\\"PostToolUse\\\\\",\\\\\"additionalContext\\\\\":\\(\\\\\"TypeScript errors detected — por favor corrígelos:\\\\\\\\n\\\\\" + .\\)}}\"; fi')"
+      "Bash(bash -c 'cd \"C:/Users/DELL/Documents/invitacion-majo-cami\" && output=$\\(npx tsc --noEmit 2>&1\\); if [ -n \"$output\" ]; then echo \"$output\" | jq -Rs \"{\\\\\"hookSpecificOutput\\\\\":{\\\\\"hookEventName\\\\\":\\\\\"PostToolUse\\\\\",\\\\\"additionalContext\\\\\":\\(\\\\\"TypeScript errors detected — por favor corrígelos:\\\\\\\\n\\\\\" + .\\)}}\"; fi')",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\DELL\\\\Documents\\\\invitacion-majo-cami\" -Recurse -Directory)",
+      "Bash(Select-Object FullName)",
+      "Bash(Sort-Object FullName)",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Sort-Object)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\DELL\\\\Documents\\\\invitacion-majo-cami\\\\src\" -Recurse | Where-Object {$_.PSIsContainer} | Select-Object FullName | Sort-Object FullName)",
+      "Bash(curl -s http://localhost:5173)"
     ]
   }
 }

@@ -1,9 +1,34 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap, useGSAP } from "./shared/gsap.config";
 import FloralDecoration from "./shared/FloralDecoration";
 
+const TARGET = new Date("2026-08-21T15:00:00");
+
+function getTimeLeft() {
+  const diff = TARGET.getTime() - Date.now();
+  if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+  return {
+    days: Math.floor(diff / 86400000),
+    hours: Math.floor((diff % 86400000) / 3600000),
+    minutes: Math.floor((diff % 3600000) / 60000),
+    seconds: Math.floor((diff % 60000) / 1000),
+  };
+}
+
+function pad(n: number) {
+  return String(n).padStart(2, "0");
+}
+
+const UNITS = ["días", "horas", "minutos", "segundos"] as const;
+
 export default function NarrativeSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [time, setTime] = useState(getTimeLeft);
+
+  useEffect(() => {
+    const id = setInterval(() => setTime(getTimeLeft()), 1000);
+    return () => clearInterval(id);
+  }, []);
 
   useGSAP(
     () => {
@@ -24,21 +49,44 @@ export default function NarrativeSection() {
         },
       });
 
-      gsap.from(".p4-versiculo", {
+      const st = {
+        trigger: sectionRef.current,
+        start: "top 78%",
+        toggleActions: "play none none none",
+      };
+
+      gsap.from(".p4-countdown-title", {
         opacity: 0,
-        y: 18,
-        duration: 0.8,
+        y: 15,
+        duration: 0.5,
         ease: "power2.out",
-        delay: 0.25,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 78%",
-          toggleActions: "play none none none",
-        },
+        delay: 0.4,
+        scrollTrigger: st,
+      });
+      gsap.from(".p4-countdown-unit", {
+        rotateX: -80,
+        opacity: 0,
+        transformOrigin: "50% top",
+        stagger: 0.15,
+        duration: 0.5,
+        ease: "power3.out",
+        delay: 0.55,
+        scrollTrigger: st,
+      });
+      gsap.to(".p4-countdown-sep", {
+        scale: 1.25,
+        repeat: -1,
+        yoyo: true,
+        duration: 0.9,
+        ease: "power1.inOut",
+        stagger: 0.2,
+        delay: 1.2,
       });
     },
     { scope: sectionRef },
   );
+
+  const values = [time.days, time.hours, time.minutes, time.seconds];
 
   return (
     <div
@@ -55,9 +103,9 @@ export default function NarrativeSection() {
           <p
             className="font-serif italic leading-loose"
             style={{
-              color: "rgba(96,20,26,0.68)",
+              color: "rgba(96,20,26,0.8)",
               lineHeight: 2,
-              fontSize: "clamp(0.95rem, 2vw, 1.15rem)",
+              fontSize: "clamp(1.05rem, 2.3vw, 1.3rem)",
             }}
           >
             Más que una boda, celebramos la fidelidad de Dios.
@@ -81,25 +129,58 @@ export default function NarrativeSection() {
           <div className="flex-1 h-px max-w-[80px]" style={{ backgroundColor: "rgba(96,20,26,0.15)" }} />
         </div>
 
-        {/* Versículo */}
-        <div className="p4-versiculo">
+        {/* Countdown */}
+        <div className="relative">
           <p
-            className="font-serif italic font-light"
-            style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.2rem)", color: "#60141A", lineHeight: 1.4 }}
-          >
-            "Amamos porque Él nos amó primero"
-          </p>
-          <p
-            className="font-serif mt-4"
+            className="p4-countdown-title font-serif mb-5"
             style={{
-              fontSize: "0.72rem",
-              letterSpacing: "0.32em",
+              color: "rgba(96,20,26,0.55)",
+              letterSpacing: "0.3em",
               textTransform: "uppercase",
-              color: "rgba(96,20,26,0.48)",
+              fontSize: "0.7rem",
             }}
           >
-            1 Jn 4,19
+            faltan
           </p>
+
+          <div className="flex items-start gap-3 md:gap-6 justify-center">
+            {values.map((val, i) => (
+              <div key={UNITS[i]} className="flex items-start gap-3 md:gap-6">
+                <div
+                  className="p4-countdown-unit"
+                  style={{ perspective: "400px" }}
+                >
+                  <span className="p4-countdown-number">{pad(val)}</span>
+                  <span className="p4-countdown-label">{UNITS[i]}</span>
+                </div>
+                {i < values.length - 1 && (
+                  <span className="p4-countdown-sep" aria-hidden="true">
+                    ·
+                  </span>
+                )}
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 flex items-center justify-center gap-4">
+            <div
+              className="w-10 h-px"
+              style={{ backgroundColor: "#60141A", opacity: 0.18 }}
+            />
+            <p
+              className="font-serif italic"
+              style={{
+                color: "rgba(96,20,26,0.72)",
+                fontSize: "clamp(0.9rem, 2vw, 1.05rem)",
+              }}
+            >
+              21 de agosto · 2026
+            </p>
+            <div
+              className="w-10 h-px"
+              style={{ backgroundColor: "#60141A", opacity: 0.18 }}
+            />
+          </div>
         </div>
       </div>
     </div>

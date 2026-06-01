@@ -37,16 +37,16 @@ export default function Propuesta4() {
       {/* Acto 3 — Historia · Versículo */}
       <NarrativeSection />
 
-      {/* Acto 4 — Lluvia de oraciones */}
-      <Oraciones />
-
-      {/* Acto 6 — Ubicaciones (ceremonia y recepción) */}
+      {/* Acto 4 — Ubicaciones (ceremonia y recepción) */}
       <Locations />
 
-      {/* Acto 7 — Dress code */}
+      {/* Acto 5 — Dress code */}
       <DressCode />
 
-      {/* Acto 8 — Hospedaje */}
+      {/* Acto 6 — Lluvia de oraciones */}
+      <Oraciones />
+
+      {/* Acto 7 — Hospedaje */}
       <Hospedaje />
 
       {/* Acto 9 — RSVP */}

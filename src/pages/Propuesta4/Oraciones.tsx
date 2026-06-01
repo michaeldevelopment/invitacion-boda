@@ -56,8 +56,8 @@ export default function Oraciones() {
           <p
             className="font-serif leading-relaxed"
             style={{
-              fontSize: "clamp(1rem, 2.2vw, 1.25rem)",
-              color: "rgba(96,20,26,0.65)",
+              fontSize: "clamp(1.1rem, 2.5vw, 1.4rem)",
+              color: "rgba(96,20,26,0.8)",
               lineHeight: 1.8,
             }}
           >
@@ -65,8 +65,8 @@ export default function Oraciones() {
           </p>
 
           <p
-            className="font-serif italic mt-5 text-sm leading-relaxed"
-            style={{ color: "rgba(96,20,26,0.5)" }}
+            className="font-serif italic mt-5 text-base leading-relaxed"
+            style={{ color: "rgba(96,20,26,0.68)" }}
           >
             Te invitamos a acompañarnos desde ahora con tus oraciones por nuestro
             matrimonio, nuestro hogar y todo lo que estamos por construir.

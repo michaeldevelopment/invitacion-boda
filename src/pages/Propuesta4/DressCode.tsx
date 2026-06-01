@@ -79,12 +79,6 @@ export default function DressCode() {
       <div className="max-w-lg mx-auto text-center">
         {/* Header */}
         <div className="p4-dc-header mb-12">
-          <p
-            className="font-serif text-[0.8rem] md:text-[0.875rem] tracking-[0.3em] uppercase mb-3"
-            style={{ color: "rgba(96,20,26,0.65)" }}
-          >
-            Vestimenta
-          </p>
           <h2
             className="font-serif font-light"
             style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", color: "#60141A" }}
@@ -92,8 +86,8 @@ export default function DressCode() {
             El ambiente que soñamos
           </h2>
           <p
-            className="font-serif italic text-sm mt-3"
-            style={{ color: "rgba(96,20,26,0.55)" }}
+            className="font-serif italic text-base mt-3"
+            style={{ color: "rgba(96,20,26,0.72)" }}
           >
             Tendremos una celebración íntima, cálida y cercana
           </p>
@@ -108,29 +102,32 @@ export default function DressCode() {
             Dress code: semi-formal
           </p>
           <p
-            className="font-serif text-sm leading-relaxed mb-6"
-            style={{ color: "rgba(96,20,26,0.65)" }}
+            className="font-serif text-base leading-relaxed mb-6"
+            style={{ color: "rgba(96,20,26,0.78)" }}
           >
             Te sugerimos elegir tonos claros y suaves que armonicen con el
             ambiente íntimo y cálido que queremos crear juntos.
           </p>
 
-          <div className="h-px mb-6 mx-auto w-16" style={{ backgroundColor: "rgba(96,20,26,0.15)" }} />
+          <div
+            className="h-px mb-6 mx-auto w-16"
+            style={{ backgroundColor: "rgba(96,20,26,0.15)" }}
+          />
 
           <p
-            className="font-serif text-sm italic mb-2"
-            style={{ color: "rgba(96,20,26,0.6)" }}
+            className="font-serif text-base italic mb-2"
+            style={{ color: "rgba(96,20,26,0.75)" }}
           >
             Nos reservamos el blanco, beige y gris
           </p>
           <p
-            className="font-serif text-sm italic mb-6"
-            style={{ color: "rgba(96,20,26,0.6)" }}
+            className="font-serif text-base italic mb-6"
+            style={{ color: "rgba(96,20,26,0.75)" }}
           >
             Por favor evitar blanco puro y colores neón
           </p>
           <p
-            className="font-serif text-sm font-bold tracking-wide mb-10"
+            className="font-serif text-base font-bold tracking-wide mb-10"
             style={{ color: "#60141A" }}
           >
             NO USAR ESTAMPADOS
@@ -138,10 +135,13 @@ export default function DressCode() {
         </div>
 
         {/* Enlace Pinterest — integrado en el diseño */}
-        <div className="p4-dc-pinterest pt-10" style={{ borderTop: "1px solid rgba(96,20,26,0.12)" }}>
+        <div
+          className="p4-dc-pinterest pt-10"
+          style={{ borderTop: "1px solid rgba(96,20,26,0.12)" }}
+        >
           <p
-            className="font-serif text-[0.72rem] tracking-[0.28em] uppercase mb-6"
-            style={{ color: "rgba(96,20,26,0.45)" }}
+            className="font-serif text-xs tracking-[0.28em] uppercase mb-6"
+            style={{ color: "rgba(96,20,26,0.62)" }}
           >
             Referencias visuales
           </p>
