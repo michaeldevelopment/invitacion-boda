@@ -193,7 +193,7 @@ export default function InvitationPhrase() {
               fontSize: "0.72rem",
               letterSpacing: "0.32em",
               textTransform: "uppercase",
-              color: "rgba(96,20,26,0.48)",
+              color: "rgba(96,20,26,0.85)",
             }}
           >
             1 Juan 4,19
