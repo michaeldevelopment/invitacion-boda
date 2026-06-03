@@ -4,6 +4,7 @@ import Propuesta1 from "./pages/Propuesta1";
 import Propuesta2 from "./pages/Propuesta2";
 import Propuesta3 from "./pages/Propuesta3";
 import Propuesta4 from "./pages/Propuesta4";
+import Propuesta5 from "./pages/Propuesta5";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/propuesta2" element={<Propuesta2 />} />
         <Route path="/propuesta3" element={<Propuesta3 />} />
         <Route path="/propuesta4" element={<Propuesta4 />} />
+        <Route path="/propuesta5" element={<Propuesta5 />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </HashRouter>

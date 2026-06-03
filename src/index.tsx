@@ -30,6 +30,13 @@ const propuestas = [
     descripcion: "Pétalos vinotinto · Elegancia minimalista · Textos definitivos",
     tag: "GSAP · Pétalos vinotinto · Paleta sobria · Esquema textual completo",
   },
+  {
+    id: 5,
+    path: "/propuesta5",
+    titulo: "Propuesta 5",
+    descripcion: "Sobre CSS 3D · Mobile-first · Pétalos de transición",
+    tag: "CSS 3D · Timeline con iconos · Swatches · Combinación P4 + referencia móvil",
+  },
 ];
 
 const fadeUp = {
