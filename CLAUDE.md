@@ -138,12 +138,13 @@ Pinterest — inspiración de estructura, layouts y diseño visual de páginas w
 
 ### Paleta de Colores
 
-| Color            | Hex       | Uso sugerido                      |
-| ---------------- | --------- | --------------------------------- |
-| Borgoña oscuro   | `#60141A` | Acentos, títulos, detalles        |
-| Verde olivo      | `#7A8D61` | Elementos secundarios, botanicals |
-| Terracota rosado | `#AB7E6C` | Fondos suaves, decorativos        |
-| Crema / beige    | `#E8E1D3` | Fondo principal de la página      |
+| Color              | Hex       | Uso sugerido                                                        |
+| ------------------ | --------- | ------------------------------------------------------------------- |
+| **Vinotinto**      | `#7B2535` | **COLOR FUNDAMENTAL — obligatorio en toda versión de la invitación.** Fondos de secciones destacadas, sobre/envelope, reproductor de música, botones principales, encabezados de sección. Tomado directamente de la invitación de referencia (`WhatsApp Image 2026-06-05 at 9.37.06 PM.jpeg`). |
+| Borgoña oscuro     | `#60141A` | Acentos profundos, texto sobre fondos claros, detalles de contraste |
+| Verde olivo        | `#7A8D61` | Elementos secundarios, botanicals                                   |
+| Terracota rosado   | `#AB7E6C` | Fondos suaves, decorativos                                          |
+| Crema / beige      | `#E8E1D3` | Fondo principal de la página                                        |
 
 ### Tipografía
 
@@ -179,6 +180,19 @@ La página debe incluir una sección con opciones de hospedaje cercanas a los do
 - Imagen de referencia (si está disponible)
 
 Buscar opciones reales cerca de las coordenadas de ambas ubicaciones al momento de construir esta sección.
+
+---
+
+## Música
+
+La invitación incluye un reproductor de música en la sección de frase de invitación.
+
+- **Canción:** Embriágame de Amor
+- **Archivo:** `src/embriagame-de-amor.mp3`
+- **Ubicación en la página:** Sección 2 — Frase de invitación, con la etiqueta "Dale play a nuestra canción"
+- **Comportamiento:** Reproductor con play/pause, avance/retroceso de 10 segundos, barra de progreso y opción de repetición en bucle.
+
+Esta canción es parte esencial de la experiencia de la invitación y debe estar presente en cualquier propuesta o versión final del sitio.
 
 ---
 

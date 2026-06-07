@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { gsap, useGSAP } from "./shared/gsap.config";
 import FloralDecoration from "./shared/FloralDecoration";
-import embriagame from "./shared/embriagame-de-amor.mp3";
+import embriagame from "../../embriagame-de-amor.mp3";
 
 const TEXT1 =
   "Hay momentos que cambian nuestras vidas y otros que marcan el comienzo de una nueva.";

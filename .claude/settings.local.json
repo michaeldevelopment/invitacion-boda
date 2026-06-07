@@ -16,7 +16,9 @@
       "Bash(Select-Object -ExpandProperty FullName)",
       "Bash(Sort-Object)",
       "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\DELL\\\\Documents\\\\invitacion-majo-cami\\\\src\" -Recurse | Where-Object {$_.PSIsContainer} | Select-Object FullName | Sort-Object FullName)",
-      "Bash(curl -s http://localhost:5173)"
+      "Bash(curl -s http://localhost:5173)",
+      "Bash(node *)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\DELL\\\\Documents\\\\invitacion-majo-cami\" -Recurse -Directory | ForEach-Object { $_.FullName } | Sort-Object)"
     ]
   }
 }

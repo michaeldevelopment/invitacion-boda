@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        vinotinto: '#7B2535',
         borgona: '#60141A',
         olivo: '#7A8D61',
         terracota: '#AB7E6C',
@@ -14,6 +15,11 @@ export default {
       fontFamily: {
         serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
         script: ['"Great Vibes"', 'cursive'],
+        sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+        // Propuesta6 — nuevas tipografías exclusivas
+        allura: ['"Great Vibes"', 'cursive'],
+        display: ['"Montserrat"', 'system-ui', 'sans-serif'],
+        label: ['"Montserrat"', 'system-ui', 'sans-serif'],
       },
       letterSpacing: {
         widest: '0.3em',

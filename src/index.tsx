@@ -3,39 +3,18 @@ import { motion } from "framer-motion";
 
 const propuestas = [
   {
-    id: 1,
-    path: "/propuesta1",
-    titulo: "Propuesta 1",
-    descripcion: "Photo-forward · Editorial · Cinematográfica",
-    tag: "Fotos reales · Timeline con iconos · Nombres editoriales",
-  },
-  {
-    id: 2,
-    path: "/propuesta2",
-    titulo: "Propuesta 2",
-    descripcion: "Scroll dinámico · Awwwards · Narrativa por actos",
-    tag: "10 actos · GSAP ScrollTrigger · Pin & reveal · Parallax",
-  },
-  {
-    id: 3,
-    path: "/propuesta3",
-    titulo: "Propuesta 3",
-    descripcion: "Sobre animado · Tarjetas apiladas · Sello de lacre",
-    tag: "Framer Motion · Mobile-first · Vintage romántico · 13 secciones",
-  },
-  {
-    id: 4,
-    path: "/propuesta4",
-    titulo: "Propuesta 4",
-    descripcion: "Pétalos vinotinto · Elegancia minimalista · Textos definitivos",
-    tag: "GSAP · Pétalos vinotinto · Paleta sobria · Esquema textual completo",
-  },
-  {
     id: 5,
     path: "/propuesta5",
     titulo: "Propuesta 5",
     descripcion: "Sobre CSS 3D · Mobile-first · Pétalos de transición",
     tag: "CSS 3D · Timeline con iconos · Swatches · Combinación P4 + referencia móvil",
+  },
+  {
+    id: 6,
+    path: "/propuesta6",
+    titulo: "Propuesta 6",
+    descripcion: "Card-based · Vinotinto · Réplica referencia Invitacion.jpeg",
+    tag: "Sobre P5 · Calendario · Countdown · Itinerario con íconos · Tipografía limpia",
   },
 ];
 
