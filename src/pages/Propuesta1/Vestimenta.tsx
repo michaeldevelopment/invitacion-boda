@@ -131,7 +131,7 @@ export default function Vestimenta() {
 
         {/* Link Pinterest */}
         <a
-          href="https://www.pinterest.com/ideas/wedding-website-design-ideas/906650286133/"
+          href="https://co.pinterest.com/mjrozo_/dress-code-algunos-referentes/"
           target="_blank"
           rel="noopener noreferrer"
           style={{
