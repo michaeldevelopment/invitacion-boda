@@ -1,15 +1,20 @@
-import { IconIglesia } from "../Propuesta5/shared/icons";
+﻿import { IconBrindis } from "../Propuesta2/shared/icons";
 
 const DARK = "#2e1710";
 
-export default function Ceremonia() {
+export default function Recepcion() {
   return (
-    <section style={{ backgroundColor: "#E8E1D3", padding: "3.5rem 1.75rem" }}>
+    <section style={{ backgroundColor: "#EDE8DF", padding: "3.5rem 1.75rem" }}>
       <div style={{ maxWidth: 360, margin: "0 auto", textAlign: "center" }}>
-
         {/* Icono */}
-        <div style={{ marginBottom: "0.75rem", display: "flex", justifyContent: "center" }}>
-          <IconIglesia color={DARK} size={40} />
+        <div
+          style={{
+            marginBottom: "0.75rem",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <IconBrindis color={DARK} size={40} />
         </div>
 
         {/* Título script */}
@@ -22,7 +27,7 @@ export default function Ceremonia() {
             marginBottom: "0.5rem",
           }}
         >
-          Ceremonia Religiosa
+          Recepción
         </h2>
 
         {/* Hora */}
@@ -35,7 +40,7 @@ export default function Ceremonia() {
             marginBottom: "1rem",
           }}
         >
-          3:00 pm
+          5:00 pm
         </p>
 
         {/* Separador */}
@@ -60,7 +65,7 @@ export default function Ceremonia() {
             marginBottom: "0.35rem",
           }}
         >
-          Parroquia La Divina Eucaristía
+          Quince Lucas Cocina Campestre
         </p>
 
         {/* Ciudad */}
@@ -74,12 +79,12 @@ export default function Ceremonia() {
             marginBottom: "1.5rem",
           }}
         >
-          Cl. 7 #35-56, El Poblado, Medellín
+          Cl 20C Sur #15 96, San Lucas, Medellín
         </p>
 
         {/* Botón */}
         <a
-          href="https://maps.app.goo.gl/Fa4F7R6wTxcUJ9YW9"
+          href="https://maps.app.goo.gl/zFz6SJPdV2hQNEE9A"
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -94,18 +99,18 @@ export default function Ceremonia() {
             textDecoration: "none",
             transition: "background 0.2s, color 0.2s",
           }}
-          onMouseEnter={e => {
+          onMouseEnter={(e) => {
             (e.currentTarget as HTMLAnchorElement).style.background = DARK;
             (e.currentTarget as HTMLAnchorElement).style.color = "#E8E1D3";
           }}
-          onMouseLeave={e => {
-            (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
+          onMouseLeave={(e) => {
+            (e.currentTarget as HTMLAnchorElement).style.background =
+              "transparent";
             (e.currentTarget as HTMLAnchorElement).style.color = DARK;
           }}
         >
           Ver ubicación
         </a>
-
       </div>
     </section>
   );

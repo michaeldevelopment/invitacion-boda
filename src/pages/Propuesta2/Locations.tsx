@@ -134,16 +134,6 @@ export default function Locations() {
         >
           Así viviremos éste día
         </h2>
-        <p
-          className="font-serif italic mt-3"
-          style={{
-            fontSize: "clamp(1rem, 2.5vw, 1.2rem)",
-            color: "rgba(96,20,26,0.72)",
-          }}
-        >
-          Aquí encontrarás los horarios y lugares para acompañarnos durante
-          nuestro matrimonio
-        </p>
       </div>
 
       {/* Timeline vertical con iconos */}

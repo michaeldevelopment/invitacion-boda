@@ -5,9 +5,10 @@ const DARK = "#2e1710";
 export default function Cierre() {
   return (
     <section style={{ backgroundColor: "#E8E1D3", textAlign: "center" }}>
-
       {/* Separador */}
-      <div style={{ height: 1, backgroundColor: `${DARK}18`, margin: "0 1.75rem" }} />
+      <div
+        style={{ height: 1, backgroundColor: `${DARK}18`, margin: "0 1.75rem" }}
+      />
 
       {/* Foto final */}
       <div style={{ lineHeight: 0 }}>
@@ -26,7 +27,6 @@ export default function Cierre() {
 
       <div style={{ padding: "3rem 2rem 3.5rem" }}>
         <div style={{ maxWidth: 340, margin: "0 auto" }}>
-
           {/* Título */}
           <h2
             style={{
@@ -52,9 +52,7 @@ export default function Cierre() {
               marginBottom: "1.75rem",
             }}
           >
-            Tu compañía para nosotros es el mejor regalo.
-            <br />
-            Gracias por caminar con nosotros. Con amor
+            Esperamos contar con tu presencia
           </p>
 
           {/* Firma */}
@@ -68,7 +66,6 @@ export default function Cierre() {
           >
             Cami y Majo
           </p>
-
         </div>
       </div>
     </section>

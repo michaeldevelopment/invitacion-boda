@@ -1,4 +1,4 @@
-import "./propuesta6.css";
+import "./propuesta1.css";
 import { useEffect, useState } from "react";
 import Loader from "./Loader";
 import EnvelopeScreen from "./EnvelopeScreen";
@@ -19,7 +19,7 @@ import Cierre from "./Cierre";
 
 type AppState = "loading" | "envelope" | "transitioning" | "open";
 
-export default function Propuesta6() {
+export default function Propuesta1() {
   const [appState, setAppState] = useState<AppState>("loading");
 
   useEffect(() => {

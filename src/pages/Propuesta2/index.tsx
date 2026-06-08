@@ -2,7 +2,7 @@ import "./shared/gsap.config";
 import { useEffect, useState } from "react";
 import { ScrollTrigger } from "./shared/gsap.config";
 
-import "./propuesta5.css";
+import "./propuesta2.css";
 
 import Loader from "./Loader";
 import EnvelopeScreen from "./EnvelopeScreen";
@@ -20,7 +20,7 @@ import RSVP from "./RSVP";
 
 type AppState = "loading" | "envelope" | "transitioning" | "open";
 
-export default function Propuesta5() {
+export default function Propuesta2() {
   const [appState, setAppState] = useState<AppState>("loading");
 
   useEffect(() => {

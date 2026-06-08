@@ -10,8 +10,7 @@ const faqs: FAQ[] = [
   {
     pregunta: "¿Hay parqueadero disponible en la iglesia y la recepción?",
     respuestas: [
-      "Sí, tanto en la parroquia como en el lugar donde se celebrará la recepción hay espacio para parquear. El recorrido entre ambos lugares es de 40 minutos aprox.",
-      "Recuerda gestionar tu transporte de ida y regreso. Si necesitas apoyo, ¡cuéntanos! :)",
+      "Sí, tanto en la parroquia como en el lugar donde se celebrará la recepción hay espacio para parquear. El recorrido entre ambos lugares es de 20 minutos aprox.",
     ],
   },
   {
@@ -27,7 +26,6 @@ export default function PreguntasFrecuentes() {
   return (
     <section style={{ backgroundColor: "#E8E1D3", padding: "3.5rem 1.75rem" }}>
       <div style={{ maxWidth: "min(90vw, 560px)", margin: "0 auto" }}>
-
         {/* Título */}
         <h2
           style={{
@@ -98,7 +96,6 @@ export default function PreguntasFrecuentes() {
             ))}
           </div>
         ))}
-
       </div>
     </section>
   );

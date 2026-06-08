@@ -4,16 +4,29 @@ const cream = "#FAF8F5";
 const creamDim = "rgba(250,248,245,0.72)";
 
 const TEXTO =
-  "Agradecemos que confirmes tu asistencia antes del 12 de junio. Después de esa fecha, si no hemos recibido respuesta, asumiremos con amor que no podrás acompañarnos.";
+  "Agradecemos que confirmes tu asistencia antes del 15 de junio. Después de esa fecha, si no hemos recibido respuesta, asumiremos con amor que no podrás acompañarnos.";
 
 function CalendarHeartIcon() {
   return (
-    <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke={cream} strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      viewBox="0 0 24 24"
+      width="40"
+      height="40"
+      fill="none"
+      stroke={cream}
+      strokeWidth="1.3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <rect x="3" y="4" width="18" height="18" rx="1" />
       <line x1="3" y1="9" x2="21" y2="9" />
       <line x1="8" y1="2" x2="8" y2="6" />
       <line x1="16" y1="2" x2="16" y2="6" />
-      <path d="M12 19s-4.5-3-4.5-6a2.5 2.5 0 0 1 4.5-1.7A2.5 2.5 0 0 1 16.5 13c0 3-4.5 6-4.5 6z" fill={cream} stroke="none" />
+      <path
+        d="M12 19s-4.5-3-4.5-6a2.5 2.5 0 0 1 4.5-1.7A2.5 2.5 0 0 1 16.5 13c0 3-4.5 6-4.5 6z"
+        fill={cream}
+        stroke="none"
+      />
     </svg>
   );
 }
@@ -27,8 +40,13 @@ export default function Confirmacion() {
     const el = sectionRef.current;
     if (!el) return;
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setStarted(true); observer.disconnect(); } },
-      { threshold: 0.3 }
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStarted(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 },
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -51,11 +69,23 @@ export default function Confirmacion() {
   }, [started]);
 
   return (
-    <section ref={sectionRef} style={{ backgroundColor: "#502129", padding: "2.5rem 2rem 3.5rem", textAlign: "center" }}>
+    <section
+      ref={sectionRef}
+      style={{
+        backgroundColor: "#502129",
+        padding: "2.5rem 2rem 3.5rem",
+        textAlign: "center",
+      }}
+    >
       <div style={{ maxWidth: "min(90vw, 560px)", margin: "0 auto" }}>
-
         {/* Icono */}
-        <div style={{ display: "flex", justifyContent: "center", marginBottom: "1rem" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: "1rem",
+          }}
+        >
           <CalendarHeartIcon />
         </div>
 
@@ -116,7 +146,6 @@ export default function Confirmacion() {
         >
           Confirmar aquí
         </a>
-
       </div>
     </section>
   );

@@ -3,18 +3,18 @@ import { motion } from "framer-motion";
 
 const propuestas = [
   {
-    id: 5,
-    path: "/propuesta5",
-    titulo: "Propuesta 5",
-    descripcion: "Sobre CSS 3D · Mobile-first · Pétalos de transición",
-    tag: "CSS 3D · Timeline con iconos · Swatches · Combinación P4 + referencia móvil",
+    id: 1,
+    path: "/",
+    titulo: "Propuesta 1",
+    descripcion: "Card-based · Vinotinto · Réplica referencia Invitacion.jpeg",
+    tag: "Sobre vinotinto · Countdown · Itinerario · Tipografía limpia",
   },
   {
-    id: 6,
-    path: "/propuesta6",
-    titulo: "Propuesta 6",
-    descripcion: "Card-based · Vinotinto · Réplica referencia Invitacion.jpeg",
-    tag: "Sobre P5 · Calendario · Countdown · Itinerario con íconos · Tipografía limpia",
+    id: 2,
+    path: "/propuesta2",
+    titulo: "Propuesta 2",
+    descripcion: "Sobre CSS 3D · Mobile-first · Pétalos de transición",
+    tag: "CSS 3D · Timeline con iconos · Swatches",
   },
 ];
 

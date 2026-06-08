@@ -1,4 +1,4 @@
-import { IconRegalo } from "../Propuesta5/shared/icons";
+﻿import { IconRegalo } from "../Propuesta2/shared/icons";
 
 export default function LluviaOraciones() {
   const cream = "#FAF8F5";
