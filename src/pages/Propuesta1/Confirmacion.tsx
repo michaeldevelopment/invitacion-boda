@@ -3,8 +3,7 @@ import { useEffect, useRef, useState } from "react";
 const cream = "#FAF8F5";
 const creamDim = "rgba(250,248,245,0.72)";
 
-const TEXTO =
-  "Agradecemos que confirmes tu asistencia antes del 15 de junio. Después de esa fecha, si no hemos recibido respuesta, asumiremos con amor que no podrás acompañarnos.";
+const TEXTO = "Haciendo click a éste botón podrás confirmar tu asistencia. Te esperamos con ansias. ";
 
 function CalendarHeartIcon() {
   return (
